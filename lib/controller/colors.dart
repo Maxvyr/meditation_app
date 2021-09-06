@@ -5,8 +5,8 @@ class CustomColor {
 
 
   static MaterialColor createMaterialColor(Color color) {
-  List<double> strengths = [.05];
-  Map<int, Color> swatch = {};
+  final strengths = [.05];
+  final Map<int, Color> swatch = {};
   final int r = color.red, g = color.green, b = color.blue;
 
   for (int i = 1; i < 10; i++) {
