@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:meditation_design_app/controller/colors.dart';
+import 'package:meditation_design_app/controller/custom_colors.dart';
+import 'package:meditation_design_app/controller/custom_img.dart';
 
 class MyHomePage extends StatefulWidget {
   @override
@@ -7,6 +8,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  var scaffoldKey = GlobalKey<ScaffoldState>();
   int _index = 0;
   final _widgetOptions = <Widget>[
     const Text(
@@ -35,8 +37,29 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: scaffoldKey,
+      extendBodyBehindAppBar: true,
       appBar: AppBar(
         title: const Text(''),
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        leading: InkWell(
+          onTap: () => scaffoldKey.currentState?.openDrawer(),
+          child: Image.asset("assets/img/iconDrawer.png"),
+        ),
+        actions: [
+          IconButton(
+            onPressed: () => debugPrint("Notifications"),
+            icon: const Icon(
+              Icons.notifications_active,
+              color: Colors.black,
+            ),
+          ),
+        ],
+      ),
+      drawer: const Drawer(
+        elevation: 12.0,
+        child: Text("Drawer"),
       ),
       body: Center(
         child: _widgetOptions.elementAt(_index),
