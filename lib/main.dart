@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:meditation_design_app/controller/colors.dart';
 import 'package:meditation_design_app/views/home_page.dart';
-
 
 // this exemple https://dribbble.com/shots/15805162-Meditation-App
 
@@ -14,10 +14,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: "Meditation App",
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: CustomColor.createMaterialColor(CustomColor.greenMain),
       ),
+      debugShowCheckedModeBanner: false,
       home: MyHomePage(),
     );
   }
 }
-

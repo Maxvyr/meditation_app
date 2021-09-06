@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:meditation_design_app/controller/colors.dart';
 
 class MyHomePage extends StatefulWidget {
   @override
@@ -45,22 +46,22 @@ class _MyHomePageState extends State<MyHomePage> {
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
             label: "Home",
-            backgroundColor: Color(0xff4b6f4d),
+            backgroundColor: CustomColor.greenMain,
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.dark_mode),
             label: "Moon",
-            backgroundColor: Color(0xff4b6f4d),
+            backgroundColor: CustomColor.greenMain,
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.spa),
             label: "Meditation",
-            backgroundColor: Color(0xff4b6f4d),
+            backgroundColor: CustomColor.greenMain,
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.favorite_border),
             label: "Favorite",
-            backgroundColor: Color(0xff4b6f4d),
+            backgroundColor: CustomColor.greenMain,
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.person_outline),
