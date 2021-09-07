@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:meditation_design_app/controller/custom_colors.dart';
 import 'package:meditation_design_app/controller/custom_img.dart';
+import 'package:meditation_design_app/views/widget/navigation_bar_custom.dart';
 
 class MyHomePage extends StatefulWidget {
   @override
@@ -45,7 +45,7 @@ class _MyHomePageState extends State<MyHomePage> {
         elevation: 0,
         leading: InkWell(
           onTap: () => scaffoldKey.currentState?.openDrawer(),
-          child: Image.asset("assets/img/iconDrawer.png"),
+          child: CustomImg.iconDrawer,
         ),
         actions: [
           IconButton(
@@ -64,38 +64,9 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Center(
         child: _widgetOptions.elementAt(_index),
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        items: const [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: "Home",
-            backgroundColor: CustomColor.greenMain,
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.dark_mode),
-            label: "Moon",
-            backgroundColor: CustomColor.greenMain,
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.spa),
-            label: "Meditation",
-            backgroundColor: CustomColor.greenMain,
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.favorite_border),
-            label: "Favorite",
-            backgroundColor: CustomColor.greenMain,
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.person_outline),
-            label: "Profil",
-            backgroundColor: Color(0xff4b6f4d),
-          ),
-        ],
-        currentIndex: _index,
-        selectedItemColor: Colors.white,
-        backgroundColor: Colors.white,
-        onTap: _itemTapped,
+      bottomNavigationBar: BottomNavBarCustom(
+        index: _index,
+        itemTap: _itemTapped,
       ),
     );
   }
