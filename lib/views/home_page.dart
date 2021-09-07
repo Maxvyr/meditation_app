@@ -45,7 +45,7 @@ class _MyHomePageState extends State<MyHomePage> {
         elevation: 0,
         leading: InkWell(
           onTap: () => scaffoldKey.currentState?.openDrawer(),
-          child: Image.asset("assets/img/iconDrawer.png"),
+          child: CustomImg.iconDrawer,
         ),
         actions: [
           IconButton(
