@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:meditation_design_app/controller/custom_img.dart';
+import 'package:meditation_design_app/views/widget/appbar_custom.dart';
+import 'package:meditation_design_app/views/widget/drawer_custom.dart';
 import 'package:meditation_design_app/views/widget/navigation_bar_custom.dart';
 
-class MyHomePage extends StatefulWidget {
+class MainController extends StatefulWidget {
   @override
-  _MyHomePageState createState() => _MyHomePageState();
+  _MainControllerState createState() => _MainControllerState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _MainControllerState extends State<MainController> {
   var scaffoldKey = GlobalKey<ScaffoldState>();
   int _index = 0;
   final _widgetOptions = <Widget>[
@@ -39,28 +40,10 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       key: scaffoldKey,
       extendBodyBehindAppBar: true,
-      appBar: AppBar(
-        title: const Text(''),
-        backgroundColor: Colors.transparent,
-        elevation: 0,
-        leading: InkWell(
-          onTap: () => scaffoldKey.currentState?.openDrawer(),
-          child: CustomImg.iconDrawer,
-        ),
-        actions: [
-          IconButton(
-            onPressed: () => debugPrint("Notifications"),
-            icon: const Icon(
-              Icons.notifications_active,
-              color: Colors.black,
-            ),
-          ),
-        ],
+      appBar: AppBarCustom(
+        onTap: () => scaffoldKey.currentState?.openDrawer(),
       ),
-      drawer: const Drawer(
-        elevation: 12.0,
-        child: Text("Drawer"),
-      ),
+      drawer: const DrawerCustom(),
       body: Center(
         child: _widgetOptions.elementAt(_index),
       ),
