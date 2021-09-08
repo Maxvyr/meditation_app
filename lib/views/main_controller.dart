@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:meditation_design_app/views/mediations_page.dart';
 import 'package:meditation_design_app/views/widget/appbar_custom.dart';
 import 'package:meditation_design_app/views/widget/drawer_custom.dart';
 import 'package:meditation_design_app/views/widget/navigation_bar_custom.dart';
@@ -10,7 +11,7 @@ class MainController extends StatefulWidget {
 
 class _MainControllerState extends State<MainController> {
   var scaffoldKey = GlobalKey<ScaffoldState>();
-  int _index = 0;
+  int _index = 2;
   final _widgetOptions = <Widget>[
     const Text(
       "Index 0 : HOME",
@@ -18,9 +19,7 @@ class _MainControllerState extends State<MainController> {
     const Text(
       'Index 1: MOON',
     ),
-    const Text(
-      'Index 2: MEDITATION',
-    ),
+    const MeditationsPage(),
     const Text(
       'Index 3: FAVORITE',
     ),
