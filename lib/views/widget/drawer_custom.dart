@@ -9,7 +9,7 @@ class DrawerCustom extends StatelessWidget {
       elevation: 12.0,
       child: Center(
         child: Text(
-          "Drawer",
+          "Drawer Coming Soon",
         ),
       ),
     );
