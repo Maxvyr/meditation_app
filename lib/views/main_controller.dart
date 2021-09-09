@@ -10,7 +10,7 @@ class MainController extends StatefulWidget {
 }
 
 class _MainControllerState extends State<MainController> {
-  var scaffoldKey = GlobalKey<ScaffoldState>();
+  GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
   int _index = 2;
   final _widgetOptions = <Widget>[
     const Text(

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:meditation_design_app/controller/custom_img.dart';
 
 class AppBarCustom extends AppBar {
-  Function()? onTap;
+  final Function()? onTap;
 
   AppBarCustom({this.onTap})
       : super(
