@@ -12,8 +12,7 @@ class CardCustom extends StatelessWidget {
 
     return Card(
       margin: const EdgeInsets.all(8.0),
-      color: Colors.amber,
-      elevation: 8.0,
+      elevation: 4.0,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(
           25.0,
@@ -38,6 +37,8 @@ class CardCustom extends StatelessWidget {
             const SizedBox(height: 5.0),
             CustomText(
               data: lessonMeditation.title,
+              color: lessonMeditation.titleColor,
+              fontWeight: FontWeight.w700,
             ),
           ],
         ),
