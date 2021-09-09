@@ -1,8 +1,8 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:meditation_design_app/views/widget/appbar_custom.dart';
 
-class MeditationsPage extends StatelessWidget {
+class MeditationsPage extends StatelessWidget{
   const MeditationsPage({Key? key}) : super(key: key);
 
   @override
@@ -12,8 +12,8 @@ class MeditationsPage extends StatelessWidget {
       body: SafeArea(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const Text(
+          children: const [
+            Text(
               "Welcome!",
               style: TextStyle(
                 fontSize: 32.0,

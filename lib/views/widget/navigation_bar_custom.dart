@@ -19,20 +19,20 @@ class BottomNavBarCustom extends StatelessWidget {
       duration: const Duration(milliseconds: 400),
       tabBackgroundColor: CustomColor.greenMain,
       color: CustomColor.black,
-      tabs: [
-        const GButton(
+      tabs: const [
+        GButton(
           icon: LineIcons.home,
         ),
-        const GButton(
+        GButton(
           icon: LineIcons.moon,
         ),
-        const GButton(
+        GButton(
           icon: LineIcons.spa,
         ),
-        const GButton(
+        GButton(
           icon: LineIcons.heart,
         ),
-        const GButton(
+        GButton(
           icon: LineIcons.user,
         ),
       ],
