@@ -1,5 +1,3 @@
-import 'dart:io';
-
 import 'package:meditation_design_app/controller/custom_colors.dart';
 import 'package:meditation_design_app/controller/custom_img.dart';
 import 'package:meditation_design_app/models/lesson_meditation.dart';

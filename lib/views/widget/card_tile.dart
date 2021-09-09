@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:line_icons/line_icons.dart';
+import 'package:meditation_design_app/controller/custom_colors.dart';
 import 'package:meditation_design_app/models/lesson_meditation.dart';
 import 'package:meditation_design_app/views/widget/text_custom.dart';
 
@@ -20,7 +22,8 @@ class CardCustom extends StatelessWidget {
       ),
       child: SizedBox(
         width: widthCard,
-        child: Column(
+        child: Stack(
+          alignment: Alignment.topCenter,
           children: [
             SizedBox(
               height: 200.0,
@@ -34,11 +37,24 @@ class CardCustom extends StatelessWidget {
                 child: lessonMeditation.img,
               ),
             ),
-            const SizedBox(height: 5.0),
-            CustomText(
-              data: lessonMeditation.title,
-              color: lessonMeditation.titleColor,
-              fontWeight: FontWeight.w700,
+            Positioned(
+              bottom: 0,
+              child: SizedBox(
+                child: CustomText(
+                  data: lessonMeditation.title,
+                  color: lessonMeditation.titleColor,
+                  fontWeight: FontWeight.w700,
+                ),
+              ),
+            ),
+            const Positioned(
+              bottom: 40.0,
+              right: 10.0,
+              child: Icon(
+                LineIcons.playCircle,
+                color: CustomColor.white,
+                size: 32.0,
+              ),
             ),
           ],
         ),
