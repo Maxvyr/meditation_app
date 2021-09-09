@@ -4,6 +4,7 @@ class CustomColor {
   static const Color greenMain = Color(0xff4b6f4d);
   static const Color black = Colors.black;
   static const Color white = Colors.white;
+  static const Color transparent = Colors.transparent;
   static Color green300 = Colors.green[300]!;
   static Color green100 = Colors.green[100]!;
 
