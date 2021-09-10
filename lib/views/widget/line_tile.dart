@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:line_icons/line_icons.dart';
-import 'package:meditation_design_app/controller/custom_colors.dart';
+import 'package:meditation_design_app/controller/color_custom.dart';
 import 'package:meditation_design_app/models/lesson_meditation.dart';
 import 'package:meditation_design_app/views/lesson_page.dart';
 import 'package:meditation_design_app/views/widget/text_custom.dart';
@@ -36,13 +36,13 @@ class LineTile extends StatelessWidget {
         subtitle: TextCustom(
           data: lessonMeditation.desc,
           fontSize: 14.0,
-          color: CustomColor.grey,
+          color: ColorCustom.grey,
         ),
         trailing: const Icon(
           LineIcons.verticalEllipsis,
           size: 34.0,
           semanticLabel: "Line Icon Vertical Ellipsis",
-          color: CustomColor.black,
+          color: ColorCustom.black,
         ),
       ),
     );

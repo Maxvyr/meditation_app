@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class CustomImg {
+class ImgCustom {
   static final iconDrawer = Image.asset("assets/img/icon_drawer.png");
   static final relaxImgMediation = Image.asset(
     "assets/img/relax_img.jpg",

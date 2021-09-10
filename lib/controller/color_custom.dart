@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class CustomColor {
+class ColorCustom {
   static const Color greenMainMaterial = Color(0xff4B6F4D);
   static Color greenMain = greenMainMaterial.withOpacity(0.8);
   static const Color relaxColor = Color(0xffcfb190);

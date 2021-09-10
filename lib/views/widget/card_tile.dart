@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:line_icons/line_icons.dart';
-import 'package:meditation_design_app/controller/custom_colors.dart';
+import 'package:meditation_design_app/controller/color_custom.dart';
 import 'package:meditation_design_app/models/lesson_meditation.dart';
 import 'package:meditation_design_app/views/lesson_page.dart';
 import 'package:meditation_design_app/views/widget/text_custom.dart';
@@ -58,7 +58,7 @@ class CardTile extends StatelessWidget {
                 right: 10.0,
                 child: Icon(
                   LineIcons.playCircle,
-                  color: CustomColor.white,
+                  color: ColorCustom.white,
                   size: 32.0,
                 ),
               ),

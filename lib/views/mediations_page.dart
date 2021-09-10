@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:line_icons/line_icons.dart';
-import 'package:meditation_design_app/controller/custom_colors.dart';
+import 'package:meditation_design_app/controller/color_custom.dart';
 import 'package:meditation_design_app/repository/dummy_list.dart';
 import 'package:meditation_design_app/views/widget/card_tile.dart';
 import 'package:meditation_design_app/views/widget/line_tile.dart';
@@ -70,12 +70,12 @@ class _MeditationsPageState extends State<MeditationsPage> {
                     suffixIcon: Container(
                       margin: const EdgeInsets.only(right: 8.0),
                       decoration: BoxDecoration(
-                        color: CustomColor.greenMain,
+                        color: ColorCustom.greenMain,
                         borderRadius: radiusTextField,
                       ),
                       child: const Icon(
                         LineIcons.search,
-                        color: CustomColor.white,
+                        color: ColorCustom.white,
                       ),
                     ),
                   ),
