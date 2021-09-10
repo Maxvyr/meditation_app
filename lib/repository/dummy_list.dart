@@ -1,27 +1,30 @@
-import 'package:meditation_design_app/controller/custom_colors.dart';
-import 'package:meditation_design_app/controller/custom_img.dart';
+import 'package:meditation_design_app/controller/color_custom.dart';
+import 'package:meditation_design_app/controller/img_custom.dart';
 import 'package:meditation_design_app/models/lesson_meditation.dart';
 
 class DummyAPI {
   static final LessonMeditation _relaxMeditation = LessonMeditation(
     title: "Relax",
-    titleColor: CustomColor.relaxColor,
+    titleColor: ColorCustom.relaxColor,
     desc: "Release the tension",
-    img: CustomImg.relaxImgMediation,
+    img: ImgCustom.relaxImgMediation,
+    imgBackground: ImgCustom.relaxImgMediationBackground,
     timer: 180,
   );
   static final LessonMeditation _breatheMeditation = LessonMeditation(
     title: "Breathe",
-    titleColor: CustomColor.breatheColor,
+    titleColor: ColorCustom.breatheColor,
     desc: "Nature",
-    img: CustomImg.breatheImgMediation,
+    img: ImgCustom.breatheImgMediation,
+    imgBackground: ImgCustom.breatheImgMediationBackground,
     timer: 500,
   );
   static final LessonMeditation _sleepMeditation = LessonMeditation(
     title: "Sleep",
-    titleColor: CustomColor.sleepColor,
-    desc: "Perfect befor spend a good night",
-    img: CustomImg.sleepImgMediation,
+    titleColor: ColorCustom.sleepColor,
+    desc: "Perfect before spend a good night",
+    img: ImgCustom.sleepImgMediation,
+    imgBackground: ImgCustom.sleepImgMediationBackground,
     timer: 360,
   );
 

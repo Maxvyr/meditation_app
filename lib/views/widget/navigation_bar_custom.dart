@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:line_icons/line_icons.dart';
-import 'package:meditation_design_app/controller/custom_colors.dart';
+import 'package:meditation_design_app/controller/color_custom.dart';
 
 class BottomNavBarCustom extends StatelessWidget {
   late final int index;
@@ -12,13 +12,13 @@ class BottomNavBarCustom extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GNav(
-      rippleColor: CustomColor.green300,
-      hoverColor: CustomColor.green100,
-      activeColor: CustomColor.white,
+      rippleColor: ColorCustom.green300,
+      hoverColor: ColorCustom.green100,
+      activeColor: ColorCustom.white,
       iconSize: 24,
       duration: const Duration(milliseconds: 400),
-      tabBackgroundColor: CustomColor.greenMain,
-      color: CustomColor.black,
+      tabBackgroundColor: ColorCustom.greenMain,
+      color: ColorCustom.black,
       tabs: const [
         GButton(
           icon: LineIcons.home,

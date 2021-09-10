@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:meditation_design_app/controller/custom_colors.dart';
+import 'package:get/get.dart';
+import 'package:meditation_design_app/controller/color_custom.dart';
 import 'package:meditation_design_app/views/main_controller.dart';
 
 // this exemple https://dribbble.com/shots/15805162-Meditation-App
@@ -17,10 +18,11 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       title: "Meditation App",
       theme: ThemeData(
-        primarySwatch: CustomColor.createMaterialColor(CustomColor.greenMain),
+        primarySwatch:
+            ColorCustom.createMaterialColor(ColorCustom.greenMainMaterial),
       ),
       debugShowCheckedModeBanner: false,
       home: MainController(),

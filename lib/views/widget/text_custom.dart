@@ -1,14 +1,14 @@
 import 'package:flutter/cupertino.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:meditation_design_app/controller/custom_colors.dart';
+import 'package:meditation_design_app/controller/color_custom.dart';
 
-class CustomText extends Text {
-  CustomText({
+class TextCustom extends Text {
+  TextCustom({
     required String data,
     double fontSize: 18.0,
-    Color color: CustomColor.black,
+    Color color: ColorCustom.black,
     FontWeight fontWeight: FontWeight.normal,
-    Color colorShadow: CustomColor.transparent,
+    Color colorShadow: ColorCustom.transparent,
     TextOverflow overflow: TextOverflow.ellipsis,
     TextAlign alignement: TextAlign.left,
     int maxLines: 1,

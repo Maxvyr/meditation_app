@@ -39,7 +39,7 @@ class _MainControllerState extends State<MainController> {
     return Scaffold(
       key: scaffoldKey,
       extendBodyBehindAppBar: true,
-      appBar: AppBarCustom(
+      appBar: AppBarCustomBase(
         onTap: () => scaffoldKey.currentState?.openDrawer(),
       ),
       drawer: const DrawerCustom(),

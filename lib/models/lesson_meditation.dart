@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 class LessonMeditation {
   late Image img;
+  late AssetImage imgBackground;
   late int timer;
   late String title;
   late Color titleColor;
@@ -13,6 +14,7 @@ class LessonMeditation {
     required this.titleColor,
     required this.desc,
     required this.img,
+    required this.imgBackground,
     required this.timer,
     this.isFav = false,
   });
