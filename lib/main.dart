@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:get/get.dart';
 import 'package:meditation_design_app/controller/custom_colors.dart';
 import 'package:meditation_design_app/views/main_controller.dart';
 
@@ -17,7 +18,7 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       title: "Meditation App",
       theme: ThemeData(
         primarySwatch:

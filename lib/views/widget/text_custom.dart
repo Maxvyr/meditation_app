@@ -2,8 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:meditation_design_app/controller/custom_colors.dart';
 
-class CustomText extends Text {
-  CustomText({
+class TextCustom extends Text {
+  TextCustom({
     required String data,
     double fontSize: 18.0,
     Color color: CustomColor.black,

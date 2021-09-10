@@ -8,6 +8,7 @@ class DummyAPI {
     titleColor: CustomColor.relaxColor,
     desc: "Release the tension",
     img: CustomImg.relaxImgMediation,
+    imgBackground: CustomImg.relaxImgMediationBackground,
     timer: 180,
   );
   static final LessonMeditation _breatheMeditation = LessonMeditation(
@@ -15,13 +16,15 @@ class DummyAPI {
     titleColor: CustomColor.breatheColor,
     desc: "Nature",
     img: CustomImg.breatheImgMediation,
+    imgBackground: CustomImg.breatheImgMediationBackground,
     timer: 500,
   );
   static final LessonMeditation _sleepMeditation = LessonMeditation(
     title: "Sleep",
     titleColor: CustomColor.sleepColor,
-    desc: "Perfect befor spend a good night",
+    desc: "Perfect before spend a good night",
     img: CustomImg.sleepImgMediation,
+    imgBackground: CustomImg.sleepImgMediationBackground,
     timer: 360,
   );
 

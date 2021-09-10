@@ -39,7 +39,7 @@ class _MeditationsPageState extends State<MeditationsPage> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              CustomText(
+              TextCustom(
                 data: "Welcome!",
                 fontSize: 32.0,
                 fontWeight: FontWeight.w700,
@@ -82,7 +82,7 @@ class _MeditationsPageState extends State<MeditationsPage> {
                 ),
               ),
               spacingH10,
-              CustomText(
+              TextCustom(
                 data: "Featured",
                 fontSize: 22.0,
                 fontWeight: FontWeight.w700,

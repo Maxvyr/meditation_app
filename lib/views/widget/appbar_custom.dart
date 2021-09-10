@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:meditation_design_app/controller/custom_img.dart';
 
-class AppBarCustom extends AppBar {
+class AppBarCustomBase extends AppBar {
   final Function()? onTap;
 
-  AppBarCustom({this.onTap})
+  AppBarCustomBase({this.onTap})
       : super(
           title: const Text(''),
           backgroundColor: Colors.transparent,
@@ -22,5 +23,20 @@ class AppBarCustom extends AppBar {
               ),
             ),
           ],
+        );
+}
+
+class AppBarCustomLesson extends AppBar {
+  AppBarCustomLesson()
+      : super(
+          backgroundColor: Colors.transparent,
+          elevation: 0,
+          leading: Padding(
+            padding: const EdgeInsets.only(left: 10.0),
+            child: IconButton(
+              onPressed: () => Get.back(),
+              icon: const Icon(Icons.arrow_back_ios),
+            ),
+          ),
         );
 }

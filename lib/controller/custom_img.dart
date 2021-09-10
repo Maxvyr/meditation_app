@@ -14,4 +14,14 @@ class CustomImg {
     "assets/img/sleep_img.jpg",
     fit: BoxFit.cover,
   );
+  static const relaxImgMediationBackground =  AssetImage(
+    "assets/img/relax_img_big_size.jpg",
+
+  );
+  static const breatheImgMediationBackground = AssetImage(
+    "assets/img/breathe_img_big_size.jpg",
+  );
+  static const sleepImgMediationBackground = AssetImage(
+    "assets/img/sleep_img_big_size.jpg",
+  );
 }
