@@ -4,9 +4,9 @@ import 'package:meditation_design_app/controller/custom_colors.dart';
 import 'package:meditation_design_app/models/lesson_meditation.dart';
 import 'package:meditation_design_app/views/widget/text_custom.dart';
 
-class CardCustom extends StatelessWidget {
+class CardTile extends StatelessWidget {
   final LessonMeditation lessonMeditation;
-  const CardCustom({required this.lessonMeditation});
+  const CardTile({required this.lessonMeditation});
 
   @override
   Widget build(BuildContext context) {

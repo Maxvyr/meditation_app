@@ -20,7 +20,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: "Meditation App",
       theme: ThemeData(
-        primarySwatch: CustomColor.createMaterialColor(CustomColor.greenMain),
+        primarySwatch:
+            CustomColor.createMaterialColor(CustomColor.greenMainMaterial),
       ),
       debugShowCheckedModeBanner: false,
       home: MainController(),
