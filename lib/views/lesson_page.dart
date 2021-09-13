@@ -1,21 +1,19 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:line_icons/line_icons.dart';
 import 'package:meditation_design_app/controller/color_custom.dart';
 import 'package:meditation_design_app/models/lesson_meditation.dart';
 import 'package:meditation_design_app/views/widget/appbar_custom.dart';
 import 'package:meditation_design_app/views/widget/text_custom.dart';
 
-class LessonPage extends StatefulWidget {
+final isFavProvider = StateProvider<bool>((ref) => false);
+final isRandomSoundProvider = StateProvider<bool>((ref) => false);
+
+class LessonPage extends ConsumerWidget {
   final LessonMeditation lessonMeditation;
-  const LessonPage({required this.lessonMeditation});
-
-  @override
-  _LessonPageState createState() => _LessonPageState();
-}
-
-class _LessonPageState extends State<LessonPage> {
-  var randomized = false;
+  LessonPage({required this.lessonMeditation});
+  
   final iconSize = 50.0;
   final spacingH20 = const SizedBox(
     height: 20.0,
@@ -24,20 +22,14 @@ class _LessonPageState extends State<LessonPage> {
     width: 20.0,
   );
 
-  Color favColor() {
-    final color = widget.lessonMeditation.isFav
-        ? ColorCustom.greenMain
-        : ColorCustom.white;
-    return color;
-  }
-
-  Color iconRandomColor() {
-    final color = randomized ? ColorCustom.greenMain : ColorCustom.white;
-    return color;
-  }
-
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final isFav = ref.watch(isFavProvider);
+    final isFavcolor = isFav.state ? ColorCustom.greenMain : ColorCustom.white;
+    final isRandomSound = ref.watch(isRandomSoundProvider);
+    final isRadomSoundcolor =
+        isRandomSound.state ? ColorCustom.greenMain : ColorCustom.white;
+
     return Scaffold(
       extendBodyBehindAppBar: true,
       extendBody: true,
@@ -46,7 +38,7 @@ class _LessonPageState extends State<LessonPage> {
         width: double.infinity,
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: widget.lessonMeditation.imgBackground,
+            image: lessonMeditation.imgBackground,
             fit: BoxFit.cover,
           ),
         ),
@@ -57,7 +49,7 @@ class _LessonPageState extends State<LessonPage> {
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
               TextCustom(
-                data: widget.lessonMeditation.title,
+                data: lessonMeditation.title,
                 fontSize: 45.0,
                 fontWeight: FontWeight.w700,
                 color: ColorCustom.white,
@@ -72,13 +64,11 @@ class _LessonPageState extends State<LessonPage> {
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       IconButton(
-                        onPressed: () {
-                          randomized = !randomized;
-                          setState(() {});
-                        },
+                        onPressed: () => ref.read(isRandomSoundProvider).state =
+                            !ref.read(isRandomSoundProvider).state,
                         icon: Icon(
                           LineIcons.random,
-                          color: iconRandomColor(),
+                          color: isRadomSoundcolor,
                           size: iconSize,
                         ),
                       ),
@@ -107,13 +97,14 @@ class _LessonPageState extends State<LessonPage> {
                       spacingW20,
                       IconButton(
                         onPressed: () {
-                          widget.lessonMeditation.isFav =
-                              !widget.lessonMeditation.isFav;
-                          setState(() {});
+                          ref.read(isFavProvider).state =
+                              !ref.read(isFavProvider).state;
+                          lessonMeditation.isFav =
+                              ref.read(isFavProvider).state;
                         },
                         icon: Icon(
                           LineIcons.heartAlt,
-                          color: favColor(),
+                          color: isFavcolor,
                           size: iconSize,
                         ),
                       ),
