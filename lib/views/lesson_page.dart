@@ -9,11 +9,12 @@ import 'package:meditation_design_app/views/widget/text_custom.dart';
 
 final isFavProvider = StateProvider<bool>((ref) => false);
 final isRandomSoundProvider = StateProvider<bool>((ref) => false);
+final isReadingProvider = StateProvider<bool>((ref) => false);
 
 class LessonPage extends ConsumerWidget {
   final LessonMeditation lessonMeditation;
   LessonPage({required this.lessonMeditation});
-  
+
   final iconSize = 50.0;
   final spacingH20 = const SizedBox(
     height: 20.0,
@@ -29,6 +30,8 @@ class LessonPage extends ConsumerWidget {
     final isRandomSound = ref.watch(isRandomSoundProvider);
     final isRadomSoundcolor =
         isRandomSound.state ? ColorCustom.greenMain : ColorCustom.white;
+    final isReading = ref.watch(isReadingProvider);
+    final iconReading = isReading.state ? LineIcons.pause : LineIcons.play;
 
     return Scaffold(
       extendBodyBehindAppBar: true,
@@ -39,7 +42,7 @@ class LessonPage extends ConsumerWidget {
         decoration: BoxDecoration(
           image: DecorationImage(
             image: lessonMeditation.imgBackground,
-            fit: BoxFit.cover,
+            fit: BoxFit.fill,
           ),
         ),
         child: Padding(
@@ -55,7 +58,19 @@ class LessonPage extends ConsumerWidget {
                 color: ColorCustom.white,
               ),
               spacingH20,
-              //TODO animation and pause menu
+              Center(
+                child: FloatingActionButton(
+                  onPressed: () {
+                    ref.read(isReadingProvider).state =
+                        !ref.read(isReadingProvider).state;
+                  },
+                  child: Icon(
+                    iconReading,
+                    color: ColorCustom.white,
+                    size: iconSize,
+                  ),
+                ),
+              ),
               spacingH20,
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
