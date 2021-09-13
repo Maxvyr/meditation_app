@@ -1,5 +1,4 @@
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:line_icons/line_icons.dart';
 import 'package:meditation_design_app/controller/color_custom.dart';
@@ -27,6 +26,7 @@ class _MeditationsPageState extends State<MeditationsPage> {
   @override
   void initState() {
     controller = TextEditingController();
+    super.initState();
   }
 
   @override

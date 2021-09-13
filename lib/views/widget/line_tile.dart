@@ -13,7 +13,6 @@ class LineTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var widthCard = 140.0;
 
     return InkWell(
       onTap: () => Get.to(
