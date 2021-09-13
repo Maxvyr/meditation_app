@@ -1,17 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:meditation_design_app/views/mediations_page.dart';
 import 'package:meditation_design_app/views/widget/appbar_custom.dart';
 import 'package:meditation_design_app/views/widget/drawer_custom.dart';
 import 'package:meditation_design_app/views/widget/navigation_bar_custom.dart';
 
-class MainController extends StatefulWidget {
-  @override
-  _MainControllerState createState() => _MainControllerState();
-}
+final indexProvider = StateProvider<int>((ref) => 2);
 
-class _MainControllerState extends State<MainController> {
-  GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
-  int _index = 2;
+class MainController extends ConsumerWidget {
+  MainController();
   final _widgetOptions = <Widget>[
     const Text(
       "Index 0 : HOME",
@@ -28,14 +25,15 @@ class _MainControllerState extends State<MainController> {
     ),
   ];
 
-  void _itemTapped(int index) {
-    setState(() {
-      _index = index;
-    });
-  }
-
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
+    final index = ref.watch(indexProvider);
+
+    void _itemTapped(int index) {
+      ref.read(indexProvider).state = index;
+    }
+
     return Scaffold(
       key: scaffoldKey,
       extendBodyBehindAppBar: true,
@@ -44,10 +42,10 @@ class _MainControllerState extends State<MainController> {
       ),
       drawer: const DrawerCustom(),
       body: Center(
-        child: _widgetOptions.elementAt(_index),
+        child: _widgetOptions.elementAt(index.state),
       ),
       bottomNavigationBar: BottomNavBarCustom(
-        index: _index,
+        index: index.state,
         itemTap: _itemTapped,
       ),
     );
