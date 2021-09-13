@@ -60,6 +60,7 @@ class LessonPage extends ConsumerWidget {
               spacingH20,
               Center(
                 child: FloatingActionButton(
+                  backgroundColor: ColorCustom.greenMain.withOpacity(0.4),
                   onPressed: () {
                     ref.read(isReadingProvider).state =
                         !ref.read(isReadingProvider).state;
