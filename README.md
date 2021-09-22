@@ -15,7 +15,7 @@ A Flutter projext inspire by [this](https://cdn.dribbble.com/users/5031392/scree
 
 
 ## Setup the project in Android studio
-1. Download the project code, preferably using `git clone https://github.com/Maxvyr/meteo_app_flutter.git`.
+1. Download the project code, preferably using `git clone https://github.com/Maxvyr/meditation_app.git`.
 2. In Android Studio, select *File* | *Open...*
 3. Select the project
      
