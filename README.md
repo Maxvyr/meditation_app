@@ -9,6 +9,12 @@
 
 A Flutter projext inspire by [this](https://cdn.dribbble.com/users/5031392/screenshots/15805162/media/34b72118ee3cf549e105cc99687f50fc.png) you can find this project on [dribble](https://dribbble.com/shots/15805162-Meditation-App)
 
+
+## Crypto Tips
+
+![https://i.imgur.com/4bS8l7R.png](https://i.imgur.com/4bS8l7R.png)
+
+
 ## Requirements
 * Computer (Windows, Mac or Linux)
 * Android Studio
